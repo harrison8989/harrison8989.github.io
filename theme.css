@@ -1,0 +1,42 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+img {
+  border: 2px solid black;
+}
+
+.jumbotron {
+}
+
+#history {
+  background-image:url('map.jpg');
+  background-position:center;
+}
+
+
+#nutrition {
+  background-image:url('green_beans.jpg');
+  background-position:center; 
+}
+
+#flatulence {
+  background-image:url('explosion.jpg');
+  background-position:center; 
+  color: white;
+}
