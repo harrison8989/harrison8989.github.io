@@ -1,0 +1,151 @@
+/* Note: colors
+ * Cardinal Red: #8C1515
+ * Cool Gray: #4D4F53
+ */
+
+/* Initialize Responsiveness */
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 60rem;
+    width: 90%;
+}
+
+.column {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.column.half {
+    width: 50%;
+}
+
+.row:before, .row:after {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.row {
+    *zoom: 1;
+}
+
+/* Header */
+#header {
+    padding: 0rem 2rem;
+    background-color: #4D4F53;
+    color: #eeeeee;
+    text-align: justify;
+}
+#header::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+#header a:link, #header a:visited {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+#header a:hover, #header a:active {
+    color: #ffffff;
+    text-decoration: underline;
+}
+#header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    padding-top: 1rem;
+    margin: 0rem;
+}/*
+#header h1::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}*/
+#header #navbar {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 1rem;
+}
+#header ul {
+    height: 100%;
+}
+
+#header li {
+    padding: 0rem 1rem;
+    display: inline;
+    list-style-type: none;
+}
+
+/* General Attributes */
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("../fonts/source_sans/SourceSansPro-Regular.otf");
+}
+@font-face {
+    font-family: "Chifont";
+    /*src: url("../fonts/HDZB_74.TTF");*/
+    src: url("../fonts/simkai.ttf");
+}
+@font-face {
+    font-family: "News Gothic Light";
+    src: url("../fonts/news_gothic_light.ttf");
+}
+
+body {
+    font-family: "Source Sans Pro", Arial, "Chifont", sans-serif;
+}
+
+/* Animation are so awesome */
+a {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    font-family: "News Gothic Light";
+}
+
+
+
+/* First Page Content */
+
+.carousel {
+    background-image: url("../images/panorama1.jpg");
+    background-repeat: no-repeat;
+    background-color: #333333;
+    height: 35rem;
+}
+
+.carousel .container {
+    padding: 5rem 0rem;
+    color: #eeeeee;
+}
+
+.column mainpage {
+    height: 200px;
+}
+
+/* Remainder */
+
+#content {
+
+}
+
+/* Footer */
+#footer {
+    background-color:
+}
+
+
+/* other stuff */
