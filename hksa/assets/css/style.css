@@ -13,7 +13,7 @@
 
 .container {
     margin: 0 auto;
-    max-width: 60rem;
+    max-width: 70rem;
     width: 90%;
 }
 
@@ -25,6 +25,18 @@
 
 .column.half {
     width: 50%;
+}
+.column.quarter {
+    width: 25%;
+}
+.column.threeq {
+    width: 75%;
+}
+.column.full {
+    width: 100%;
+}
+.center {
+    text-align: center;
 }
 
 .row:before, .row:after {
@@ -46,6 +58,7 @@
     background-color: #4D4F53;
     color: #eeeeee;
     text-align: justify;
+    border-box: 0px 10px 10px #4D4F63;
 }
 #header::after {
     content: '';
@@ -124,7 +137,7 @@ a {
     background-image: url("../images/panorama1.jpg");
     background-repeat: no-repeat;
     background-color: #333333;
-    height: 35rem;
+    height: 30rem;
 }
 
 .carousel .container {
@@ -132,8 +145,16 @@ a {
     color: #eeeeee;
 }
 
-.column mainpage {
-    height: 200px;
+.column.half.mainpage {
+    height: 15rem;
+    padding: 1rem 1rem;
+}
+.column.half.mainpage img {
+    box-shadow: 0px 0px 10px #000000;
+}
+
+.column.half.mainpage:hover {
+    box-shadow: 0px 1px 5px #cccccc;
 }
 
 /* Remainder */
@@ -144,7 +165,12 @@ a {
 
 /* Footer */
 #footer {
-    background-color:
+    background-color: #8C1515;
+    color: #eeeeee;
+    padding: 1rem 0rem;
+}
+#footer h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0px;
 }
 
 
