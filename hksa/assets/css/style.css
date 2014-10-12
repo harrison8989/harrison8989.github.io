@@ -49,6 +49,7 @@
 }
 
 .row {
+    margin: 2rem 0rem;
     *zoom: 1;
 }
 
@@ -158,10 +159,6 @@ a {
 }
 
 /* Remainder */
-
-#content {
-
-}
 
 /* Footer */
 #footer {
