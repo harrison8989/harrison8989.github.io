@@ -1,6 +1,8 @@
 /* Note: colors
  * Cardinal Red: #8C1515
  * Cool Gray: #4D4F53
+ * Very Light Gray: #EEEEEE;
+ * Very Dark Gray: #333333;
  */
 
 /* Initialize Responsiveness */
@@ -35,6 +37,10 @@
 .column.full {
     width: 100%;
 }
+.column.rest {
+    overflow: hidden;
+    float: none;
+}
 .center {
     text-align: center;
 }
@@ -49,7 +55,7 @@
 }
 
 .row {
-    margin: 2rem 0rem;
+    margin: 1rem 0rem;
     *zoom: 1;
 }
 
@@ -121,6 +127,7 @@
 
 body {
     font-family: "Source Sans Pro", Arial, "Chifont", sans-serif;
+    font-size: 15px;
 }
 
 /* Animation are so awesome */
@@ -149,13 +156,14 @@ a {
 .column.half.mainpage {
     height: 15rem;
     padding: 1rem 1rem;
+    color: #333333;
 }
 .column.half.mainpage img {
-    box-shadow: 0px 0px 10px #000000;
+    box-shadow: 0px 0px 5px #000000;
 }
 
 .column.half.mainpage:hover {
-    box-shadow: 0px 1px 5px #cccccc;
+    box-shadow: -2px -2px 2px #cccccc;
 }
 
 /* Remainder */
@@ -164,7 +172,9 @@ a {
 #footer {
     background-color: #8C1515;
     color: #eeeeee;
-    padding: 1rem 0rem;
+    padding: 0.1rem 0rem;
+    margin: 0rem;
+    font-size: 14px;
 }
 #footer h1, h2, h3, h4, h5, h6, p {
     margin-top: 0px;
