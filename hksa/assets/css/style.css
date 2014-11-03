@@ -60,12 +60,18 @@
 }
 
 /* Header */
+
 #header {
     padding: 0rem 2rem;
     background-color: #4D4F53;
     color: #eeeeee;
     text-align: justify;
     border-box: 0px 10px 10px #4D4F63;
+}
+#mainpage #header {
+    background-color: #222222;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
 }
 #header::after {
     content: '';
@@ -81,19 +87,23 @@
     color: #ffffff;
     text-decoration: underline;
 }
+/* TODO: put in a better place */
+a:link, a:visited {
+    color: #8C1515;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #AC5555;
+    text-decoration: underline;
+}
 #header h1 {
     display: inline-block;
     vertical-align: middle;
     height: 100%;
     padding-top: 1rem;
     margin: 0rem;
-}/*
-#header h1::before {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-}*/
+}
 #header #navbar {
     display: inline-block;
     vertical-align: middle;
@@ -102,12 +112,12 @@
 #header ul {
     height: 100%;
 }
-
 #header li {
     padding: 0rem 1rem;
     display: inline;
     list-style-type: none;
 }
+
 
 /* General Attributes */
 
@@ -117,17 +127,41 @@
 }
 @font-face {
     font-family: "Chifont";
-    /*src: url("../fonts/HDZB_74.TTF");*/
     src: url("../fonts/simkai.ttf");
+    /*src: url("../fonts/HDZB_74.TTF");*/
 }
 @font-face {
     font-family: "News Gothic Light";
     src: url("../fonts/news_gothic_light.ttf");
 }
+@font-face {
+    font-family: "Muli";
+    src: url("../fonts/Muli/Muli-Regular.ttf");
+}
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/Raleway/Raleway-Medium.ttf");
+}
+@font-face {
+    font-family: "Handlee";
+    src: url("../fonts/Handlee-Regular.ttf");
+}
 
 body {
     font-family: "Source Sans Pro", Arial, "Chifont", sans-serif;
     font-size: 15px;
+    color: #333333;
+}
+
+h1 {
+    font-family: Raleway, Chifont;
+}
+
+body#mainpage {
+    color: #eeeeee;
+    background-color: #333333;
+    background-image: url("../images/panorama2.jpg");
+    background-repeat: no-repeat;
 }
 
 /* Animation are so awesome */
@@ -141,16 +175,38 @@ a {
 
 /* First Page Content */
 
-.carousel {
-    background-image: url("../images/panorama1.jpg");
+.carousel-main {
+    /*background-image: url("../images/panorama2.jpg");
     background-repeat: no-repeat;
-    background-color: #333333;
-    height: 30rem;
+    background-color: #333333;*/
+    font-size: 20px;
+    overflow: hidden;
+    background: -webkit-linear-gradient(left, rgba(20,20,20,0.0), rgba(20,20,20,0.7), rgba(20,20,20,0.0));
+    background: -o-linear-gradient(right, rgba(20,20,20,0.0), rgba(20,20,20,0.7), rgba(20,20,20,0.0));
+    background: -moz-linear-gradient(right, rgba(20,20,20,0.0), rgba(20,20,20,0.7), rgba(20,20,20,0.0));
+    background: linear-gradient(to right, rgba(20,20,20,0.0), rgba(20,20,20,0.7), rgba(20,20,20,0.0));
 }
 
 .carousel .container {
-    padding: 5rem 0rem;
+    padding: 5rem 2rem;
+    height: 25rem;
+}
+
+.carousel-main .container {
+    padding: 5rem 2rem;
+    height: 50rem; /* Need a better fix */
+    /*background: -webkit-linear-gradient(left, rgba(20,20,20,0.2), rgba(20,20,20,0.7), rgba(20,20,20,0.2));
+    background: -o-linear-gradient(right, rgba(20,20,20,0.2), rgba(20,20,20,0.7), rgba(20,20,20,0.2));
+    background: -moz-linear-gradient(right, rgba(20,20,20,0.2), rgba(20,20,20,0.7), rgba(20,20,20,0.2));
+    background: linear-gradient(to right, rgba(20,20,20,0.2), rgba(20,20,20,0.7), rgba(20,20,20,0.2));*/
+}
+
+#carousel-about {
+    background-color: #333333;
+    background-image: url("../images/panorama2.jpg");
+    background-repeat: no-repeat;
     color: #eeeeee;
+
 }
 
 .column.half.mainpage {
@@ -176,6 +232,19 @@ a {
     margin: 0rem;
     font-size: 14px;
 }
+#mainpage #footer {
+    background-color: black;
+    color: #eeeeee;
+    padding: 0.1rem 0rem;
+    margin: 0rem;
+    font-size: 14px;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
 #footer h1, h2, h3, h4, h5, h6, p {
     margin-top: 0px;
 }
