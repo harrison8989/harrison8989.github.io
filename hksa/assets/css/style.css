@@ -28,10 +28,8 @@
 .text.column:before {
     background-image:url("../images/flower-bg.png");
     background-repeat: no-repeat;
-    content: ' ';
-    position:relative;
-    left:-55px;
-    top:150px;
+    content: '';
+    position:absolute;
     z-index: -1;
     height: 271px;
     width: 296px;
@@ -169,13 +167,18 @@ a:hover, a:active {
 
 body {
     font-family: "Source Sans Pro", Arial, "Chifont", sans-serif;
-    font-size: 17px;
+    font-size: 20px;
     color: #4D4F53;
     background-color: #eeeeee;
+    line-height: 1.4em;
 }
 
 h1, h2 {
     font-family: Raleway, Chifont;
+    padding: 0px;
+}
+h1 {
+    padding: 1rem 0rem;
 }
 
 body#mainpage {
@@ -197,14 +200,14 @@ a {
 /* First Page Content */
 
 .carousel {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .carousel-main {
     /*background-image: url("../images/panorama2.jpg");
     background-repeat: no-repeat;
     background-color: #333333;*/
-    font-size: 20px;
+    font-size: 25px;
     overflow: hidden;
     background: -webkit-linear-gradient(left, rgba(20,20,20,0.0), rgba(20,20,20,0.7), rgba(20,20,20,0.0));
     background: -o-linear-gradient(right, rgba(20,20,20,0.0), rgba(20,20,20,0.7), rgba(20,20,20,0.0));
@@ -246,10 +249,17 @@ a {
 .column.half.mainpage:hover {
     box-shadow: -2px -2px 2px #cccccc;
 }
+.column.half.image {
+    overflow: hidden;
+}
+.column.half.image img{
+    overflow: hidden;
+}
+
 
 /* Remainder */
 .person {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 /* Footer */
@@ -258,14 +268,13 @@ a {
     color: #eeeeee;
     padding: 0.1rem 0rem;
     margin: 0rem;
-    font-size: 14px;
+    font-size: 15px;
 }
 #mainpage #footer {
     background-color: black;
     color: #eeeeee;
     padding: 0.1rem 0rem;
     margin: 0rem;
-    font-size: 14px;
     opacity: 0.8;
     filter: alpha(opacity=80);
     width: 100%;
@@ -292,4 +301,8 @@ img {
 }
 #footer img {
     box-shadow: none;
+}
+table {
+    border-spacing: 2rem 0rem;
+    border-collapse: separate;
 }
