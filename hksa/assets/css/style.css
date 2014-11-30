@@ -290,13 +290,13 @@ a {
     position: relative;
     padding: 2rem;
     transition: 0.5s;
-    background-color: white;
+    background-color: #eeeeee;
     margin-bottom: 2rem;
 }
 
 .person:hover .column {
     box-shadow: 0px 0px 2px black;
-    background-color: #eeeeee;
+    background-color: #dddddd;
 }
 
 .person .column .main {
