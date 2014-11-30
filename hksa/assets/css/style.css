@@ -66,9 +66,21 @@
 }
 
 .row {
-    margin: 1rem 0rem;
-    padding: 1rem 0px;
+    margin: 0rem 0rem;
+    padding: 2rem 0px;
     *zoom: 1;
+}
+
+.eventBox1 {
+    background-color: #dddddd;
+}
+
+.eventBox2 {
+    background-color: #eeeeee;
+}
+.eventBoxDivider {
+    background-color: #8C1515;
+    color: white;
 }
 
 /* Header */
@@ -86,7 +98,8 @@
     filter: alpha(opacity=80);
 }
 #header li {
-    font-size: 20px;
+    font-size: 18px;
+    font-family: "Raleway";
 }
 #header::after {
     content: '';
@@ -102,21 +115,11 @@
     color: #ffffff;
     text-decoration: underline;
 }
-/* TODO: put in a better place */
-a:link, a:visited {
-    color: #8C1515;
-    text-decoration: none;
-}
-
-a:hover, a:active {
-    color: #AC5555;
-    text-decoration: underline;
-}
 #header h1 {
     display: inline-block;
     vertical-align: middle;
     height: 100%;
-    padding-top: 1rem;
+    padding-top: 2rem;
     margin: 0rem;
 }
 #header h3, h4 {
@@ -134,6 +137,16 @@ a:hover, a:active {
     padding: 0rem 1rem;
     display: inline;
     list-style-type: none;
+}
+/* TODO: put in a better place */
+a:link, a:visited {
+    color: #8C1515;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #AC5555;
+    text-decoration: underline;
 }
 
 
@@ -167,9 +180,9 @@ a:hover, a:active {
 
 body {
     font-family: "Source Sans Pro", Arial, "Chifont", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: #4D4F53;
-    background-color: #eeeeee;
+    background-color: white;
     line-height: 1.4em;
 }
 
@@ -192,7 +205,6 @@ body#mainpage {
 a {
     -webkit-transition: 0.3s;
     transition: 0.3s;
-    font-family: "News Gothic Light";
 }
 
 
@@ -255,6 +267,14 @@ a {
 .column.half.image img{
     overflow: hidden;
 }
+.column.half.event {
+    overflow: hidden;
+}
+.column.half.event img {
+    width: 100%;
+}
+
+
 
 
 /* Remainder */
@@ -262,18 +282,23 @@ a {
     font-size: 15px;
 }
 
+.person img {
+    float:left;
+    margin-right: 2rem;
+}
+
 /* Footer */
 #footer {
     background-color: #8C1515;
     color: #eeeeee;
-    padding: 0.1rem 0rem;
+    padding: 1rem 0rem;
     margin: 0rem;
     font-size: 15px;
 }
 #mainpage #footer {
     background-color: black;
     color: #eeeeee;
-    padding: 0.1rem 0rem;
+    padding: 1rem 0rem;
     margin: 0rem;
     opacity: 0.8;
     filter: alpha(opacity=80);
@@ -294,15 +319,33 @@ a {
 /* other stuff */
 
 img {
-    box-shadow: 0px 0px 5px #000000;
+    border: 1px solid #4D4F53;
+/*    box-shadow: 0px 0px 5px #000000;*/
 }
 #mainpage img {
-    box-shadow: none;
+    border: none;
 }
 #footer img {
-    box-shadow: none;
+    border: none;
 }
 table {
     border-spacing: 2rem 0rem;
     border-collapse: separate;
+}
+
+a.button {
+    padding: 0.7rem;
+    margin: 0.3rem;
+    border: 2px solid #4D4F53;
+    color: #ffffff;
+}
+
+a:link.button, a:visited.button {
+    background-color: #333333;
+    text-decoration: none;
+}
+
+a:hover.button, a:active.button {
+    background-color: #4D4F53;
+    text-decoration: none;
 }
