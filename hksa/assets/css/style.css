@@ -83,6 +83,52 @@
     color: white;
 }
 
+
+/* General Attributes */
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("../fonts/source_sans/SourceSansPro-Regular.otf");
+}
+@font-face {
+    font-family: "Chifont";
+    src: url("../fonts/simkai.ttf");
+    /*src: url("../fonts/HDZB_74.TTF");*/
+}
+@font-face {
+    font-family: "News Gothic Light";
+    src: url("../fonts/news_gothic_light.ttf");
+}
+@font-face {
+    font-family: "Muli";
+    src: url("../fonts/Muli/Muli-Regular.ttf");
+}
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/raleway/Raleway-Medium.ttf");
+}
+@font-face {
+    font-family: "Handlee";
+    src: url("../fonts/Handlee-Regular.ttf");
+}
+
+body {
+    font-family: "Source Sans Pro", Arial, "Chifont", sans-serif;
+    font-size: 18px;
+    color: #4D4F53;
+    background-color: white;
+    line-height: 1.4em;
+}
+
+h1, h2 {
+    font-family: Raleway, Chifont;
+    padding: 0px;
+}
+h1 {
+    padding: 1rem 0rem;
+}
+
+
+
 /* Header */
 
 #header {
@@ -147,51 +193,6 @@ a:link, a:visited {
 a:hover, a:active {
     color: #AC5555;
     text-decoration: underline;
-}
-
-
-/* General Attributes */
-
-@font-face {
-    font-family: "Source Sans Pro";
-    src: url("../fonts/source_sans/SourceSansPro-Regular.otf");
-}
-@font-face {
-    font-family: "Chifont";
-    src: url("../fonts/simkai.ttf");
-    /*src: url("../fonts/HDZB_74.TTF");*/
-}
-@font-face {
-    font-family: "News Gothic Light";
-    src: url("../fonts/news_gothic_light.ttf");
-}
-@font-face {
-    font-family: "Muli";
-    src: url("../fonts/Muli/Muli-Regular.ttf");
-}
-@font-face {
-    font-family: "Raleway";
-    src: url("../fonts/Raleway/Raleway-Medium.ttf");
-}
-@font-face {
-    font-family: "Handlee";
-    src: url("../fonts/Handlee-Regular.ttf");
-}
-
-body {
-    font-family: "Source Sans Pro", Arial, "Chifont", sans-serif;
-    font-size: 18px;
-    color: #4D4F53;
-    background-color: white;
-    line-height: 1.4em;
-}
-
-h1, h2 {
-    font-family: Raleway, Chifont;
-    padding: 0px;
-}
-h1 {
-    padding: 1rem 0rem;
 }
 
 body#mainpage {
