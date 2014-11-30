@@ -81,6 +81,10 @@
 .eventBox2 {
     background-color: #eeeeee;
 }
+
+.eventBox1 h3, .eventBox2 h3 {
+    color: #888888;
+}
 .eventBoxDivider {
     background-color: #8C1515;
     color: white;
@@ -265,12 +269,12 @@ a {
 .column.half.mainpage:hover {
     box-shadow: -2px -2px 2px #cccccc;
 }
-.column.half.image {
+/*.column.half.image {
     overflow: hidden;
 }
 .column.half.image img{
-    overflow: hidden;
-}
+    width: 100%;
+}*/
 .column.half.event {
     overflow: hidden;
 }
@@ -285,6 +289,21 @@ a {
 /*.person {
     font-size: 15px;
 }*/
+
+.about {
+    height: 401px;
+    overflow: hidden;
+    padding: 2rem;
+    background-color: #eeeeee;
+}
+
+.involved {
+    background-color: #eeeeee;
+    padding: 2rem;
+}
+.involved:last-child {
+    border-left: 2px solid #4D4F53;
+}
 
 .person .column {
     position: relative;
