@@ -251,10 +251,23 @@ a {
 
 #carousel-about {
     background-color: #333333;
-    background-image: url("../images/panorama2.jpg");
+    background-image: url("../images/stanford.jpg");
     background-repeat: no-repeat;
     color: #eeeeee;
+}
 
+#carousel-events {
+    background-color: #333333;
+    background-image: url("../images/panorama1.jpg");
+    background-repeat: no-repeat;
+    color: #eeeeee;
+}
+
+#carousel-people {
+    background-color: #333333;
+    background-image: url("../images/trees.jpg");
+    background-repeat: no-repeat;
+    color: #eeeeee;
 }
 
 .column.half.mainpage {
