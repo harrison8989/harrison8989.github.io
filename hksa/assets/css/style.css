@@ -333,7 +333,7 @@ a {
 
 .person .column .main {
     position: absolute;
-    left: 250px;
+    left: 265px;
     visibility: visible;
     opacity: 1;
     transition: 0.3s;
@@ -347,10 +347,11 @@ a {
 
 .person .column .description {
     position: absolute;
-    left: 250px;
+    left: 265px;
     visibility: hidden;
     opacity: 0;
     transition: 0.3s;
+    padding-right: 2rem;
 }
 
 .person:hover .column .description {
