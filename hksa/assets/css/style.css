@@ -242,7 +242,7 @@ a {
 
 .carousel-main .container {
     padding: 5rem 2rem;
-    height: 50rem; /* Need a better fix */
+    height: 60rem; /* Need a better fix */
     /*background: -webkit-linear-gradient(left, rgba(20,20,20,0.2), rgba(20,20,20,0.7), rgba(20,20,20,0.2));
     background: -o-linear-gradient(right, rgba(20,20,20,0.2), rgba(20,20,20,0.7), rgba(20,20,20,0.2));
     background: -moz-linear-gradient(right, rgba(20,20,20,0.2), rgba(20,20,20,0.7), rgba(20,20,20,0.2));
