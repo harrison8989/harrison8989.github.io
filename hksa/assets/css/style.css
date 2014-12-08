@@ -204,10 +204,19 @@ a:hover, a:active {
 
 body#mainpage {
     color: #eeeeee;
-    background-color: #333333;
+    /*background-color: #333333;
     background-image: url("../images/panorama2.jpg");
     background-repeat: no-repeat;
-    height: 100%;
+    height: 100%;*/
+
+}
+html body#mainpage {
+    background: url("../images/panorama3.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 }
 
 /* Animation are so awesome */
@@ -230,19 +239,18 @@ a {
     background-color: #333333;*/
     font-size: 25px;
     overflow: hidden;
-    background: -webkit-linear-gradient(left, rgba(20,20,20,0.0), rgba(20,20,20,0.7), rgba(20,20,20,0.0));
+    /*background: -webkit-linear-gradient(left, rgba(20,20,20,0.0), rgba(20,20,20,0.7), rgba(20,20,20,0.0));
     background: -o-linear-gradient(right, rgba(20,20,20,0.0), rgba(20,20,20,0.7), rgba(20,20,20,0.0));
     background: -moz-linear-gradient(right, rgba(20,20,20,0.0), rgba(20,20,20,0.7), rgba(20,20,20,0.0));
-    background: linear-gradient(to right, rgba(20,20,20,0.0), rgba(20,20,20,0.7), rgba(20,20,20,0.0));
+    background: linear-gradient(to right, rgba(20,20,20,0.0), rgba(20,20,20,0.7), rgba(20,20,20,0.0));*/
 }
 
 .carousel .container {
     padding: 5rem 2rem;
-    height: 20rem;
 }
 
 .carousel-main .container {
-    padding: 5rem 2rem;
+    padding: 3rem 2rem 5rem 2rem;
     /*height: 60rem; /* Need a better fix */
     /*background: -webkit-linear-gradient(left, rgba(20,20,20,0.2), rgba(20,20,20,0.7), rgba(20,20,20,0.2));
     background: -o-linear-gradient(right, rgba(20,20,20,0.2), rgba(20,20,20,0.7), rgba(20,20,20,0.2));
@@ -373,7 +381,11 @@ a {
     position: relative;
 }
 #wrapper #content {
-    padding-bottom: 59px; /*Pretty hacky, I don't know how it will look*/
+    padding-bottom: 120px; /*Pretty hacky, I don't know how it will look*/
+    background: -webkit-linear-gradient(left, rgba(20,20,20,0.1), rgba(20,20,20,0.4), rgba(20,20,20,0.1));
+    background: -o-linear-gradient(right, rgba(20,20,20,0.1), rgba(20,20,20,0.4), rgba(20,20,20,0.1));
+    background: -moz-linear-gradient(right, rgba(20,20,20,0.1), rgba(20,20,20,0.4), rgba(20,20,20,0.1));
+    background: linear-gradient(to right, rgba(20,20,20,0.1), rgba(20,20,20,0.4), rgba(20,20,20,0.1));
 }
 
 /* Footer */
