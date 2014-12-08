@@ -159,12 +159,12 @@ h1 {
     display: inline-block;
     width: 100%;
 }
-#header a:link, #header a:visited {
-    color: #cccccc;
+#header a:link, #header a:visited, #footer a:link, #footer a:visited {
+    color: #dddddd;
     text-decoration: none;
 }
 
-#header a:hover, #header a:active {
+#header a:hover, #header a:active, #footer a:hover, #footer a:active {
     color: #ffffff;
     text-decoration: underline;
 }
