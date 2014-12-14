@@ -130,11 +130,11 @@ body {
     color: #4D4F53;
     background-color: white;
     line-height: 1.4em;
+    min-width: 1463px;
 }
 
 h1, h2 {
     font-family: Raleway, Chifont;
-    padding: 0px;
 }
 h1 {
     padding: 0.3em 0rem;
