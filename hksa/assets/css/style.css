@@ -19,11 +19,6 @@
     width: 90%;
 }
 
-.column {
-    float: left;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
 /* Something to look into: */
 /*.text.column:after {
     background-image:url("../images/flower-bg.png");
@@ -36,20 +31,27 @@
     padding: 10rem;
 }*/
 
-.column.half {
-    width: 50%;
-}
-.column.quarter {
-    width: 25%;
-}
-.column.threeq {
-    width: 75%;
-}
-.column.full {
-    width: 100%;
-}
-.column.third {
-    width: 33%;
+@media (min-width: 960px) {
+    .column {
+        float: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .column.half {
+        width: 50%;
+    }
+    .column.quarter {
+        width: 25%;
+    }
+    .column.threeq {
+        width: 75%;
+    }
+    .column.full {
+        width: 100%;
+    }
+    .column.third {
+        width: 33%;
+    }
 }
 .column.rest {
     overflow: hidden;
@@ -130,7 +132,7 @@ body {
     color: #4D4F53;
     background-color: white;
     line-height: 1.4em;
-    min-width: 1463px;
+    /*min-width: 1463px;*/ /* TODO: responsive */
 }
 
 h1, h2 {
@@ -296,16 +298,21 @@ a {
 .column.half.mainpage:hover {
     box-shadow: -2px -2px 2px #cccccc;
 }
-/*.column.half.image {
-    overflow: hidden;
-}
-.column.half.image img{
-    width: 100%;
-}*/
 .column.half.event {
     overflow: hidden;
 }
 .column.half.event img {
+    width: 100%;
+}
+.column.half.about {
+    height: 401px;
+    padding: 2rem;
+    background-color: #eeeeee;
+}
+.column.half.image {
+    overflow: hidden;
+}
+.column.half.image img{
     width: 100%;
 }
 
@@ -317,19 +324,22 @@ a {
     font-size: 15px;
 }*/
 
-.about {
-    height: 401px;
-    overflow: hidden;
-    padding: 2rem;
-    background-color: #eeeeee;
-}
+
 
 .involved {
     background-color: #eeeeee;
     padding: 2rem;
 }
-.involved:last-child {
-    border-left: 2px solid #4D4F53;
+
+@media (min-width: 960px) {
+    .involved:last-child {
+        border-left: 2px solid #4D4F53;
+    }
+}
+@media (max-width: 959px) {
+    .involved:last-child {
+        border-top: 2px solid #4D4F53;
+    }
 }
 
 .person .column {
@@ -396,6 +406,30 @@ a {
 #wrapper #content {
     padding-bottom: 120px; /*Pretty hacky, I don't know how it will look*/
 }
+@media (max-width: 1100px) {
+    #wrapper #content {
+        padding-bottom: 140px;
+    }
+}
+
+@media (max-width: 959px) {
+    #wrapper #content {
+        padding-bottom: 190px;
+    }
+}
+
+@media (max-width: 590px) {
+    #wrapper #content {
+        padding-bottom: 210px;
+    }
+}
+
+@media (max-width: 450px) {
+    #wrapper #content {
+        padding-bottom: 230px;
+    }
+}
+
 
 #mainpage #wrapper #content {
     background: -webkit-linear-gradient(left, rgba(20,20,20,0.1), rgba(20,20,20,0.4), rgba(20,20,20,0.1));
@@ -474,4 +508,31 @@ a:hover.button, a:active.button {
 .small {
     font-size: 15px;
     line-height: 1.2em;
+}
+
+/* responsiveness stuff */
+@media only screen and (max-width: 1463px) and (min-width: 949px) {
+    body {
+        /*min-width: 1463px;*/
+    }
+}
+
+/*#media only screen and (max-width: 1270px) {
+    .column.half.about {
+        width: 100%;
+        height: 100%;
+    }
+    .column.half.image {
+        width: 100%;
+    }
+}*/
+
+@media only screen and (max-width: 949px) and (min-width: 420px) {
+    body {
+        /*min-width: 1463px;*/
+    }
+}
+
+@media only screen and (max-width: 420px) {
+
 }
