@@ -375,6 +375,14 @@ a {
     overflow: auto;
 }
 
+.person-top h2 {
+    margin-bottom: .3em;
+}
+.person-top p {
+    display: inline;
+    margin-bottom: 0px;
+}
+
 
 .person img {
     float:left;
