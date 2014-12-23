@@ -357,7 +357,7 @@ a {
 
 .person .column .main {
     position: absolute;
-    left: 265px;
+    left: 249px;
     visibility: visible;
     opacity: 1;
     transition: 0.3s;
@@ -371,7 +371,7 @@ a {
 
 .person .column .description {
     position: absolute;
-    left: 265px;
+    left: 249px;
     visibility: hidden;
     opacity: 0;
     transition: 0.3s;
@@ -396,7 +396,7 @@ a {
 
 .person img {
     float:left;
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 #wrapper {
