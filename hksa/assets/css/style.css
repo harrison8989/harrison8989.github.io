@@ -137,6 +137,10 @@ body {
 
 h1, h2 {
     font-family: Raleway, Chifont;
+    line-height: 1.2em;
+}
+h3 {
+    line-height: 1.2em;
 }
 h1 {
     padding: 0.3em 0rem;
@@ -264,6 +268,19 @@ a {
     padding: 3rem 2rem 5rem 2rem;
     /*height: 60rem; /* Need a better fix */
 }
+
+.carousel-main .container .top {
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-main .container .top h1 {
+    padding: 0px;
+    margin: 0px;
+    padding-bottom: 0.2em;
+}
+
 
 #carousel-about {
     background-color: #333333;
