@@ -445,10 +445,6 @@ a {
     padding: 1rem 0rem;
     margin: 0rem;
     font-size: 15px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
 }
 #mainpage #footer {
     background-color: black;
@@ -457,6 +453,11 @@ a {
     margin: 0rem;
     opacity: 0.8;
     filter: alpha(opacity=80);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
 }
 
 #footer h1, h2, h3, h4, h5, h6, p {
