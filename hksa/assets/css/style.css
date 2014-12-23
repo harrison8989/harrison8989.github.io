@@ -462,7 +462,7 @@ a {
 #footer ul {
     margin: 0rem;
     margin-bottom: 1rem;
-    padding-left: 1rem;
+    padding: 0rem;
     height: 100%;
 }
 
