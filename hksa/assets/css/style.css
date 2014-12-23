@@ -457,7 +457,25 @@ a {
     position: absolute;
     bottom: 0;
     left: 0;
+}
 
+#footer ul {
+    margin: 0rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    height: 100%;
+}
+
+#footer li {
+    padding-right: 0.5rem;
+    display: inline;
+    list-style-type: none;
+}
+
+@media (max-width: 960px) {
+    #footer li {
+        display: block;
+    }
 }
 
 #footer h1, h2, h3, h4, h5, h6, p {
@@ -505,6 +523,13 @@ a:hover.button, a:active.button {
     background-color: #4D4F53;
     text-decoration: none;
 }
+
+@media (max-width: 960px) {
+    a.button {
+        display: block;
+    }
+}
+
 
 .small {
     font-size: 15px;
