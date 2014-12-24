@@ -216,6 +216,8 @@ h2 {
 }
 #header ul {
     height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 #header li {
     padding: 0rem 1rem;
@@ -228,7 +230,7 @@ h2 {
         vertical-align: middle;
     }
     #header h1 {
-        padding: 1rem 1rem 1rem 0rem;
+        padding: 0.5rem 1rem 0.5rem 0rem;
     }
 
     #header::after {
@@ -250,6 +252,7 @@ h2 {
 
     #header ul {
         padding-left: 0px;
+        min-height: 20px;
     }
 
     #header li {
