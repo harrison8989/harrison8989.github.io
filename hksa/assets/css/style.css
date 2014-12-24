@@ -253,6 +253,7 @@ h2 {
     #header ul {
         padding-left: 0px;
         min-height: 20px;
+        padding: 0.5rem 0rem 0.5rem 0rem;
     }
 
     #header li {
