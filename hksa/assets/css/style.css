@@ -228,15 +228,34 @@ h2 {
         vertical-align: middle;
     }
     #header h1 {
-        padding: 1rem 0rem;
+        padding: 1rem 1rem 1rem 0rem;
     }
 
     #header::after {
         width: 0%;
     }
+    #header #navbar {
+        padding: 0px;
+    }
+
 }
 
 @media (max-width: 800px) {
+    #header #navbar {
+    }
+
+    #header h1 {
+        padding-right: 1rem;
+    }
+
+    #header ul {
+        padding-left: 0px;
+    }
+
+    #header li {
+        padding: 0rem;
+        padding-right: 1rem;
+    }
 
 }
 
@@ -374,6 +393,12 @@ a {
 }
 .column.half.image {
     overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+.column.half.image p {
+    margin: 0px;
+    padding: 0px;
 }
 .column.half.image img{
     width: 100%;
