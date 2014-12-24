@@ -134,6 +134,21 @@ body {
     line-height: 1.4em;
     /*min-width: 1463px;*/ /* TODO: responsive */
 }
+@media (max-width: 960px) {
+    #header {
+        font-size: 80%;
+        padding: 0rem;
+    }
+    #content {
+        font-size: 80%;
+    }
+    #content .carousel-main {
+        font-size: 100%;
+    }
+    #footer {
+        font-size: 80%;
+    }
+}
 
 h1, h2 {
     font-family: Raleway, Chifont;
@@ -161,13 +176,13 @@ h2 {
     text-align: justify;
     box-shadow: 0px 0px 5px black;
 }
+
 #mainpage #header {
     background-color: #222222;
     opacity: 0.8;
     filter: alpha(opacity=80);
 }
 #header li {
-    font-size: 18px;
     font-family: "Raleway";
 }
 #header::after {
@@ -207,6 +222,20 @@ h2 {
     display: inline;
     list-style-type: none;
 }
+@media (max-width: 960px) {
+    #header {
+        padding: 0rem 1rem;
+        vertical-align: middle;
+    }
+    #header h1 {
+        padding: 1rem 0rem;
+    }
+
+    #header::after {
+        width: 0%;
+    }
+}
+
 /* TODO: put in a better place */
 a:link, a:visited {
     color: #8C1515;
@@ -249,14 +278,14 @@ a {
 /* First Page Content */
 
 .carousel {
-    font-size: 25px;
+    font-size: 150%;
 }
 
 .carousel-main {
     /*background-image: url("../images/panorama2.jpg");
     background-repeat: no-repeat;
     background-color: #333333;*/
-    font-size: 25px;
+    font-size: 150%;
     overflow: hidden;
 }
 
@@ -266,7 +295,16 @@ a {
 
 .carousel-main .container {
     padding: 3rem 2rem 5rem 2rem;
-    /*height: 60rem; /* Need a better fix */
+}
+
+@media (max-width: 960px) {
+    .carousel .container {
+        padding: 0rem;
+    }
+
+    .carousel-main .container {
+        padding: 0rem;
+    }
 }
 
 .carousel-main .container .top {
@@ -275,10 +313,14 @@ a {
     margin-right: auto;
 }
 
-.carousel-main .container .top h1 {
+.carousel-main .container .top p {
     padding: 0px;
     margin: 0px;
-    padding-bottom: 0.2em;
+}
+
+.carousel-main .container .top h1 {
+    margin: 0px;
+    padding: 0.2em 0em;
 }
 
 
@@ -326,22 +368,24 @@ a {
     padding: 2rem;
     background-color: #eeeeee;
 }
+
+@media (max-width: 960px) {
+    .column.half.about {
+        height: 100%;
+    }
+}
 .column.half.image {
     overflow: hidden;
 }
 .column.half.image img{
     width: 100%;
+    max-width: 100%;
 }
 
 
 
 
 /* Remainder */
-/*.person {
-    font-size: 15px;
-}*/
-
-
 
 .involved {
     background-color: #eeeeee;
@@ -461,7 +505,7 @@ a {
     color: #eeeeee;
     padding: 1rem 0rem;
     margin: 0rem;
-    font-size: 15px;
+    font-size: 80%;
 }
 #mainpage #footer {
     background-color: black;
@@ -489,9 +533,16 @@ a {
     list-style-type: none;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 600px) {
     #footer li {
         display: block;
+    }
+    #wrapper #content {
+        padding-bottom: 0px;
+    }
+
+    #mainpage #footer {
+        position: relative;
     }
 }
 
@@ -508,6 +559,7 @@ a {
 
 img {
     border: 1px solid #4D4F53;
+    max-width: 80%;
 /*    box-shadow: 0px 0px 5px #000000;*/
 }
 #mainpage img {
@@ -549,7 +601,7 @@ a:hover.button, a:active.button {
 
 
 .small {
-    font-size: 15px;
+    font-size: 80%;
     line-height: 1.2em;
 }
 
