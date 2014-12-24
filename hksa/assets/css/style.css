@@ -31,7 +31,7 @@
     padding: 10rem;
 }*/
 
-@media (min-width: 960px) {
+@media (min-width: 640px) {
     .column {
         float: left;
         padding-left: 1rem;
@@ -134,7 +134,7 @@ body {
     line-height: 1.4em;
     /*min-width: 1463px;*/ /* TODO: responsive */
 }
-@media (max-width: 960px) {
+@media (max-width: 640px) {
     #header {
         font-size: 80%;
         padding: 0rem;
@@ -222,7 +222,7 @@ h2 {
     display: inline;
     list-style-type: none;
 }
-@media (max-width: 960px) {
+@media (max-width: 640px) {
     #header {
         padding: 0rem 1rem;
         vertical-align: middle;
@@ -234,6 +234,10 @@ h2 {
     #header::after {
         width: 0%;
     }
+}
+
+@media (max-width: 800px) {
+
 }
 
 /* TODO: put in a better place */
@@ -297,13 +301,13 @@ a {
     padding: 3rem 2rem 5rem 2rem;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 640px) {
     .carousel .container {
-        padding: 0rem;
+        padding: 0.7rem 0rem;
     }
 
     .carousel-main .container {
-        padding: 0rem;
+        padding: 0.7rem 0rem;
     }
 }
 
@@ -368,12 +372,6 @@ a {
     padding: 2rem;
     background-color: #eeeeee;
 }
-
-@media (max-width: 960px) {
-    .column.half.about {
-        height: 100%;
-    }
-}
 .column.half.image {
     overflow: hidden;
 }
@@ -381,6 +379,16 @@ a {
     width: 100%;
     max-width: 100%;
 }
+@media (max-width: 1100px) {
+    .column.half.about {
+        height: 100%;
+        width: 100%;
+    }
+    .column.half.image {
+        width: 100%;
+    }
+}
+
 
 
 
@@ -392,12 +400,12 @@ a {
     padding: 2rem;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 640px) {
     .involved:last-child {
         border-left: 2px solid #4D4F53;
     }
 }
-@media (max-width: 959px) {
+@media (max-width: 640px) {
     .involved:last-child {
         border-top: 2px solid #4D4F53;
     }
@@ -467,6 +475,7 @@ a {
 #wrapper #content {
     padding-bottom: 120px; /*Pretty hacky, I don't know how it will look*/
 }
+/*
 @media (max-width: 1100px) {
     #wrapper #content {
         padding-bottom: 140px;
@@ -483,7 +492,7 @@ a {
     #wrapper #content {
         padding-bottom: 210px;
     }
-}
+}*/
 
 @media (max-width: 450px) {
     #wrapper #content {
@@ -533,7 +542,7 @@ a {
     list-style-type: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
     #footer li {
         display: block;
     }
@@ -593,7 +602,7 @@ a:hover.button, a:active.button {
     text-decoration: none;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 800px) {
     a.button {
         display: block;
     }
