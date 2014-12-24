@@ -19,18 +19,6 @@
     width: 90%;
 }
 
-/* Something to look into: */
-/*.text.column:after {
-    background-image:url("../images/flower-bg.png");
-    background-repeat: no-repeat;
-    content: '';
-    position:absolute;
-    z-index: -1;
-    height: 271px;
-    width: 296px;
-    padding: 10rem;
-}*/
-
 @media (min-width: 640px) {
     .column {
         float: left;
@@ -74,6 +62,10 @@
     margin: 0rem 0rem;
     padding: 2rem 0px;
     *zoom: 1;
+}
+
+.smallrow:after {
+    clear: both;
 }
 
 .eventBox1 {
@@ -440,6 +432,10 @@ a {
     }
 }
 
+.person {
+    min-width: 500px;
+}
+
 .person .column {
     position: relative;
     padding: 2rem;
@@ -495,6 +491,19 @@ a {
 .person img {
     float:left;
     margin-right: 1rem;
+    max-width: 50%;
+}
+
+@media (max-width: 640px) {
+    .person img {
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 1400px) {
+    .column.half.person {
+        width: 100%;
+    }
 }
 
 #wrapper {
@@ -521,14 +530,13 @@ a {
     #wrapper #content {
         padding-bottom: 210px;
     }
-}*/
+}
 
 @media (max-width: 450px) {
     #wrapper #content {
         padding-bottom: 230px;
     }
-}
-
+}*/
 
 #mainpage #wrapper #content {
     background: -webkit-linear-gradient(left, rgba(20,20,20,0.1), rgba(20,20,20,0.4), rgba(20,20,20,0.1));
