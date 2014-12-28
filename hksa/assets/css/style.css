@@ -64,8 +64,8 @@
     *zoom: 1;
 }
 
-.smallrow:after {
-    clear: both;
+.smallrow {
+    padding: 0px;
 }
 
 .eventBox1 {
@@ -469,7 +469,6 @@ a {
 .person-inner:hover .column .switch .main, .person-inner:active .column .switch .main {
     visibility: hidden;
     opacity: 0;
-    height: 0;
     overflow: visible;
 }
 
@@ -479,8 +478,6 @@ a {
     visibility: hidden;
     opacity: 0;
     transition: 0.3s;
-    padding-right: 2rem;
-    height: 0;
     overflow: visible;
 }
 
