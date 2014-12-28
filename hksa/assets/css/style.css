@@ -383,14 +383,13 @@ a {
     width: 100%;
 }
 .column.half.about {
-    height: 401px;
     padding: 2rem;
     background-color: #eeeeee;
 }
 .column.half.image {
     overflow: hidden;
     margin: 0px;
-    padding: 0px;
+    padding: 0rem 2rem;
 }
 .column.half.image p {
     margin: 0px;
@@ -407,6 +406,8 @@ a {
     }
     .column.half.image {
         width: 100%;
+        padding: 0rem;
+        padding-top: 2rem;
     }
 }
 
@@ -615,7 +616,6 @@ a {
 
 img {
     border: 1px solid #4D4F53;
-    max-width: 80%;
 /*    box-shadow: 0px 0px 5px #000000;*/
 }
 #mainpage img {
