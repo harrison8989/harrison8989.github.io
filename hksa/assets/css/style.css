@@ -444,6 +444,10 @@ a {
     background-color: #eeeeee;
     margin-bottom: 2rem;
     margin: 0rem;
+    clear: both;
+}
+
+.person-inner .column {
 }
 
 .person-inner:hover, .person-inner:active {
@@ -467,13 +471,6 @@ a {
     overflow: invisible;
 }
 
-.person-inner:hover .column .switch .main, .person-inner:active .column .switch .main {
-    visibility: hidden;
-    opacity: 0;
-    overflow: visible;
-}
-
-
 .person-inner .column .switch .description {
     position: absolute;
     visibility: hidden;
@@ -482,10 +479,40 @@ a {
     overflow: visible;
 }
 
-.person-inner:hover .column .switch .description, .person-inner:active .column .switch .description {
-    visibility: visible;
-    opacity: 1;
-    overflow: invisible;
+@media (max-width: 640px) {
+    .column.half.person {
+        float: left;
+        width: 50%;
+        padding: 0.5rem;
+    }
+    .person-inner {
+        height: 500px;
+    }
+    .person-inner .column.rest {
+        height: auto;
+    }
+    .person-inner .column .switch .main {
+        position: relative;
+        visibility: visible;
+        overflow: visible;
+    }
+    .person-inner .column .switch .main p {
+        margin: 0px;
+    }
+}
+
+@media (min-width: 640px) {
+    .person-inner:hover .column .switch .main, .person-inner:active .column .switch .main {
+        visibility: hidden;
+        opacity: 0;
+        overflow: visible;
+    }
+
+    .person-inner:hover .column .switch .description, .person-inner:active .column .switch .description {
+        visibility: visible;
+        opacity: 1;
+        overflow: invisible;
+    }
 }
 
 .person-top h2 {
@@ -503,11 +530,8 @@ a {
 }
 
 @media (max-width: 640px) {
-    .person-inner img {
-        max-width: 50%;
-    }
-    .person-inner img {
-        /*max-width: 50%;*/
+    .person-inner {
+        min-width: 0px;
     }
 }
 
