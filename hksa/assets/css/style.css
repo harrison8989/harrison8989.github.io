@@ -123,10 +123,13 @@ body {
     font-size: 18px;
     color: #4D4F53;
     background-color: white;
-    line-height: 1.4em;
+    line-height: 140%;
     /*min-width: 1463px;*/ /* TODO: responsive */
 }
 @media (max-width: 640px) {
+    body {
+        line-height: 120%;
+    }
     #header {
         font-size: 80%;
         padding: 0rem;
@@ -144,10 +147,10 @@ body {
 
 h1, h2 {
     font-family: Raleway, Chifont;
-    line-height: 1.2em;
+    line-height: 120%;
 }
 h3 {
-    line-height: 1.2em;
+    line-height: 120%;
 }
 h1 {
     padding: 0.3em 0rem;
@@ -483,10 +486,11 @@ a {
     .column.half.person {
         float: left;
         width: 50%;
-        padding: 0.5rem;
+        padding: 0.2rem;
     }
     .person-inner {
-        height: 500px;
+        height: 410px;
+        padding: 0.5rem;
     }
     .person-inner .column.rest {
         height: auto;
@@ -682,7 +686,7 @@ a:hover.button, a:active.button {
 
 .small {
     font-size: 80%;
-    line-height: 1.2em;
+    line-height: 120%;
 }
 
 /* responsiveness stuff */
