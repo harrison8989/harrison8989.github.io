@@ -309,6 +309,7 @@ a {
     background-color: #333333;*/
     font-size: 150%;
     overflow: hidden;
+    
 }
 
 .carousel .container {
