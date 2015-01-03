@@ -471,6 +471,7 @@ a {
 
 .person-inner .column.rest {
     height: 252px; /*same height as profile picture */
+    padding-left: 0.5rem;
 }
 
 .person-inner .column .switch .main {
