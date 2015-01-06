@@ -480,6 +480,12 @@ a {
     opacity: 1;
     transition: 0.3s;
     overflow: invisible;
+    margin-left: 2rem;
+    text-indent: -2rem;
+}
+
+.switch p {
+    margin-bottom: 0px;
 }
 
 .person-inner .column .switch .description {
