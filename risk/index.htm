@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../assets/normalize.css" rel="stylesheet">
+    <link href="../assets/style.css" rel="stylesheet">
+    <title>Risk Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1 class="center">Risk Calculator</h1>
+        <hr />
+        <p>Simulates a battle in risk. For reference:</p>
+        <ul>
+          <li>If attacker has three soldiers or fewer, subtract one to get die attack count. Otherwise, attacker has three attacking die.</li>
+          <li>If defender has one soldier, defender has one dice. Otherwise, defender has two defending die.</li>
+          <li>When rolling, defender wins ties.</li>
+        </ul>
+      </div>
+      <div class="row">
+        <form id="form" action="javascript:void(0);">
+          <div class="column">
+            <table>
+              <tr>
+                <td class="label">Attacker number of soldiers:</td>
+                <td><input type="text" id="attacker"></td>
+              </tr>
+              <tr>
+                <td class="label">Defender number of soldiers:</td>
+                <td><input type="text" id="defender"></td>
+              </tr>
+              <tr>
+                <td class="label">Optional: minimum remaining attacking soldiers</td>
+                <td><input type="text" id="attackerlimit"></td>
+              </tr>
+              <tr>
+                <td class="label">Optional: minimum remaining defending soldiers</td>
+                <td><input type="text" id="defenderlimit"></td>
+              </tr>
+            </table>
+            <p><span id="result2" class="center"></span></p>
+          </div>
+          <div class="column rest">
+            <input id="submit" type="submit" value="Fight!"
+                   style="width: 100%; height: 100px;">
+            <p><span id="result"></span></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script src="risk.js"></script>
+</html>
