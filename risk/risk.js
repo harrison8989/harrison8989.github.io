@@ -24,11 +24,13 @@ document.getElementById("form").onsubmit = function() {
     var defender = parseInt(document.getElementById("defender").value);
     var attackerlimit = parseInt(document.getElementById("attackerlimit").value) || 0;
     var defenderlimit = parseInt(document.getElementById("defenderlimit").value) || 0;
+    var numAttacks = parseInt(document.getElementById("numAttacks").value) || -1;
     if(!attacker && !defender) {
         document.getElementById("result").innerHTML = "Error: did not supply attacker or defender values!";
     } else {
         var resultString = "Battle Start! " + attacker + " vs " + defender + "<br />";
-        while(attacker > attackerlimit && attacker > 1 && defender > defenderlimit) {
+        var attackCounter = 0;
+        while(attackCounter != numAttacks && attacker > attackerlimit && attacker > 1 && defender > defenderlimit) {
             var attackDie = getDie(numAttack(attacker));
             var defendDie = getDie(numDefend(defender));
 
@@ -48,6 +50,8 @@ document.getElementById("form").onsubmit = function() {
             attacker -= attackLoss;
             defender -= defendLoss;
             resultString += "<b>Result: " + attacker + " vs " + defender + "<br /><br /></b>";
+
+            attackCounter++;
         }
         document.getElementById("result2").innerHTML = "<h3>Final result: " + attacker + " vs " + defender + "</h3>";
         document.getElementById("result").innerHTML = resultString;

@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../assets/normalize.css" rel="stylesheet">
     <link href="../assets/style.css" rel="stylesheet">
+    <style>
+      input[type="text"] {
+          width: 100%;
+      }
+    </style>
     <title>Risk Calculator</title>
   </head>
   <body>
@@ -32,19 +37,23 @@
                 <td><input type="text" id="defender"></td>
               </tr>
               <tr>
-                <td class="label">Minimum remaining attackers:</td>
+                <td class="label">Number of Attacks:</td>
+                <td><input type="text" id="numAttacks"></td>
+              </tr>
+              <tr>
+                <td class="label">Min. remaining attackers:</td>
                 <td><input type="text" id="attackerlimit"></td>
               </tr>
               <tr>
-                <td class="label">Minimum remaining defenders:</td>
+                <td class="label">Min. remaining defenders:</td>
                 <td><input type="text" id="defenderlimit"></td>
               </tr>
             </table>
             <p><span id="result2" class="center"></span></p>
           </div>
           <div class="column rest">
-            <input id="submit" type="submit" value="Fight!"
-                   style="min-width: 49%; height: 100px;">
+              <input id="submit" type="submit" value="Fight!"
+                     style="min-width: 49%; height: 100px;">
             <p><span id="result"></span></p>
           </div>
         </form>
