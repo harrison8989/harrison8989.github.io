@@ -3,7 +3,9 @@
 //Custom CS can be used to style the picture-browser.
 (function initialize() {
 	var folders = [];
+	var photos = [];
 	var pictureElem = document.getElementById("picture-browser");
+	var metaFile = "files.txt";
 
 	//Set up event listeners
 	function addEvents() {
@@ -11,7 +13,7 @@
 	}
 
 	//Get photos from the directory
-	function getPhotos(folder) {
+	function getPhotos(folder, callback) {
 		var url = document.URL;
 		console.log(window.location)
 
@@ -19,8 +21,17 @@
 		url = url.substring(0, url.lastIndexOf('/'));
 		console.log(url);
 		var requestObj = new XMLHttpRequest();
-		requestObj.addEventListener("load", response);
+		requestObj.addEventListener("load", function() {
+			console.log(requestObj.responseText);
+			callback();
+		});
 		requestObj.overrideMimeType('text/xml');
+		requestObj.open("GET", url + "/" + folder + "/" + metaFile);
+		requestObj.send();
+	}
+
+	function addPhotos() {
+
 	}
 
 	//Display the photos contained in one folder
@@ -38,7 +49,10 @@
 		pictureElem.appendChild(listElem);
 
 		//add images
-		var photos = getPhotos(folder);
+		var photos = getPhotos(folder, addPhotos);
+
+		//add event listeners each time a folder is displayed
+		addEvents();
 	}
 
 	//Grab meta data from the html file to use folders
