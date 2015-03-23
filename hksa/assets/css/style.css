@@ -471,7 +471,7 @@ a {
 
 .person-inner .column.rest {
     height: 252px; /*same height as profile picture */
-    padding: 0rem 0rem;
+    padding: 0rem;
 }
 
 .person-inner .column .switch .main {
@@ -707,8 +707,8 @@ a:hover.button, a:active.button {
 
 
 .small {
-    font-size: 80%;
-    line-height: 120%;
+    font-size: 75%;
+    line-height: 125%;
 }
 
 /*#media only screen and (max-width: 1270px) {
