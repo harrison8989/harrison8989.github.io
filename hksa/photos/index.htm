@@ -8,6 +8,46 @@
     <link href="../assets/css/style.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/favicon.ico">
     <title>Stanford HKSA: Images</title>
+
+    <style>
+      #picture-browser-select {
+        text-align: center;
+      }
+
+      #picture-browser-photo {
+        float: left;
+        padding-right: 1rem;
+        width: 70%;
+      }
+
+      #picture-browser-list {
+        float: left;
+        height: 400px;
+        width: 30%;
+        overflow-y: auto;
+      }
+
+      #picture-browser-photo img {
+        max-width: 70%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      #picture-browser-list img {
+        height: 150px;
+        display: block;
+        margin: 0 auto;
+      }
+      ul {  
+        margin: 0rem;
+        padding: 0rem;
+        height: 100%;
+      }
+
+      li { 
+        list-style-type: none;
+      }
+    </style>
   </head>
   <body>
     <!-- Header -->
@@ -29,7 +69,9 @@
       <div class="carousel" id="carousel-photos">
         <div class="container">
           <h1>Photos</h1>
-          <div id="picture-browser"></div>
+          <div class="row">
+            <div id="picture-browser"></div>
+          </div>
         </div>
       </div>
       <!-- End Container -->
