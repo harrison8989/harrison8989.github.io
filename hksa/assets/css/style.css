@@ -173,9 +173,7 @@ h2 {
 }
 
 #mainpage #header {
-    background-color: #222222;
-    opacity: 0.8;
-    filter: alpha(opacity=80);
+    background-color: rgba(34, 34, 34, 0.8);
 }
 #header li {
     font-family: "Raleway";
