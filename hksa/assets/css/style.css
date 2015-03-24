@@ -201,6 +201,10 @@ h2 {
     padding-top: 2rem;
     margin: 0rem;
 }
+#header h1 img {
+    vertical-align: middle;
+    border: none;
+}
 #header h3, h4 {
     display: inline-block;
 }
