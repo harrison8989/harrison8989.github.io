@@ -609,12 +609,10 @@ a {
     font-size: 80%;
 }
 #mainpage #footer {
-    background-color: black;
+    background-color: rgba(0,0,0,.8);
     color: #eeeeee;
     padding: 1rem 0rem;
     margin: 0rem;
-    opacity: 0.8;
-    filter: alpha(opacity=80);
     width: 100%;
     position: absolute;
     bottom: 0;
