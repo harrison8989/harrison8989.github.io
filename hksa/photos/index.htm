@@ -7,11 +7,23 @@
     <link href="../assets/css/normalize.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../assets/favicon.ico">
+    <!-- The HSKA graph page is at http://graph.facebook.com/2200291307
+         CANNOT use graph API to get photos in album for group
+         Until then, we'll have to upload images manually... which is
+         annoying/not worth effort -->
     <title>Stanford HKSA: Images</title>
 
     <style>
+      #photos {
+        background-color: #DDDDDD;
+      }
+
+      #picture-browser {
+        height: 28rem;
+      }
+
       #picture-browser-select {
-        text-align: center;
+        display: none;
       }
 
       #picture-browser-photo {
@@ -36,8 +48,25 @@
       #picture-browser-list img {
         height: 150px;
         display: block;
-        margin: 0 auto;
+        margin: 10px auto;
       }
+
+      #picture-browser-list li {
+        padding: 0.5rem;
+      }
+
+      #picture-browser-list li:nth-child(even) {
+        background-color: #EEEEEE;
+      }
+
+      #picture-browser-list li:nth-child(odd) {
+        background-color: #CCCCCC;
+      }
+
+      #picture-browser-list li:hover {
+        background-color: #CC4545;
+      }
+
       ul {  
         margin: 0rem;
         padding: 0rem;
@@ -69,6 +98,10 @@
       <div class="carousel" id="carousel-photos">
         <div class="container">
           <h1>Photos</h1>
+        </div>
+      </div>
+      <div id="photos">
+        <div class="container">
           <div class="row">
             <div id="picture-browser"></div>
           </div>
