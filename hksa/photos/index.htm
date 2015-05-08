@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="picture-browser" content="../assets/images/test_photos">
+    <link href="../assets/css/normalize.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/favicon.ico">
+    <!-- The HSKA graph page is at http://graph.facebook.com/2200291307
+         CANNOT use graph API to get photos in album for group
+         Until then, we'll have to upload images manually... which is
+         annoying/not worth effort -->
+    <title>Stanford HKSA: Images</title>
+
+    <style>
+      #photos {
+        background-color: #DDDDDD;
+      }
+
+      #picture-browser {
+        height: 28rem;
+      }
+
+      #picture-browser-select {
+        display: none;
+      }
+
+      #picture-browser-photo {
+        float: left;
+        padding-right: 1rem;
+        width: 70%;
+      }
+
+      #picture-browser-list {
+        float: left;
+        height: 400px;
+        width: 30%;
+        overflow-y: auto;
+      }
+
+      #picture-browser-photo img {
+        max-width: 70%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      #picture-browser-list img {
+        height: 150px;
+        display: block;
+        margin: 10px auto;
+      }
+
+      #picture-browser-list li {
+        padding: 0.5rem;
+      }
+
+      #picture-browser-list li:nth-child(even) {
+        background-color: #EEEEEE;
+      }
+
+      #picture-browser-list li:nth-child(odd) {
+        background-color: #CCCCCC;
+      }
+
+      #picture-browser-list li:hover {
+        background-color: #CC4545;
+      }
+
+      ul {  
+        margin: 0rem;
+        padding: 0rem;
+        height: 100%;
+      }
+
+      li { 
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header">
+      <h1>HKSA &#183; <img src="../assets/images/chinese_banner.png" /></h1>
+      <!--香港同學會-->
+      <!-- Swap out with image later -->
+      <div id="navbar">
+        <ul>
+          <li><a href="..">Home</a></li>
+          <li><a href="../about">About</a></li>
+          <li><a href="../events">Events</a></li>
+          <li><a href="../people">People</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Header -->
+    <!-- Main Body -->
+    <div id="content">
+      <div class="carousel" id="carousel-photos">
+        <div class="container">
+          <h1>Photos</h1>
+        </div>
+      </div>
+      <div id="photos">
+        <div class="container">
+          <div class="row">
+            <div id="picture-browser"></div>
+          </div>
+        </div>
+      </div>
+      <!-- End Container -->
+    </div>
+    <!-- End Main Body -->
+    <!-- Footer -->
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="column rest">
+            <div class="column">
+              <p><strong>Affiliated Groups</strong></p>
+            </div>
+            <div class="column rest">
+              <ul>
+                <li><a href="https://studentaffairs.stanford.edu/a3c">A3C (Asian American Activities Center)</a></li>
+                <li><a href="http://aasa.stanford.edu/">AASA (Asian American Student Association)</a></li>
+                <li><a href="http://taiwanese.stanford.edu/">TCS (Taiwanese Cultural Society)</a></li>
+                <li><a href="http://aagsa.stanford.edu/">AAGSA (Asian American Graduate Student Asso.)</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <p><strong>© 2014, Hong Kong Student Association at Stanford University. HKSA is a member of Stanford's Asian American Student Association (AASA).</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Footer -->
+
+    <script src="../assets/js/picture-browser.js"></script>
+  </body>
+</html>
