@@ -196,14 +196,12 @@ h2 {
     display: inline-block;
     vertical-align: middle;
     height: 100%;
-    /*padding-top: 1rem;*/
+    padding-top: 2rem;
     margin: 0rem;
 }
-#header img {
-    display: inline-block;
+#header h1 img {
     vertical-align: middle;
     border: none;
-    padding-top: 1rem;
 }
 #header h3, h4 {
     display: inline-block;
@@ -229,9 +227,6 @@ h2 {
         vertical-align: middle;
     }
     #header h1 {
-        padding: 0.5rem 1rem 0.5rem 0rem;
-    }
-    #header img {
         padding: 0.5rem 1rem 0.5rem 0rem;
     }
 
@@ -323,7 +318,7 @@ a {
 }
 
 .carousel-main .container {
-    padding: 5rem 2rem 5rem 2rem;
+    padding: 2.5rem 2rem 4rem 2rem;
 }
 
 @media (max-width: 640px) {
