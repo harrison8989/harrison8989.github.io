@@ -14,6 +14,12 @@
  * * If no, check if hash matches a pre-defined list
  ***/
 
+/* TODO:
+ * * Make the puzzles giant squares to click on
+ * * freebies for answers that are basically right (thinking mainly of "New Features...")
+ * * Cute pictures? IDK
+ ***/
+
 /****************** Constants ****************/
 
 // Please don't try to reverse engineer the hashes!
@@ -50,6 +56,9 @@ var CORRECT = 2;
 var CLOSE = 1;
 var WRONG = 0;
 
+/******************** Global Variables ********************/
+var currPuzzle = "";
+
 /******************** Helper functions ********************/
 
 // Probability that there's a hash collision? wellll
@@ -66,15 +75,19 @@ String.prototype.hashCode = function() {
     return hash;
 }
 
+// Sanitize, which basically means turning to uppercase and removing spaces.
+// Should be good enough to catch most input errors.
 function sanitize(string) {
     return string.toUpperCase().replace(/\s/g, '');
 }
 
-function checkAnswer(puzzleName, guess) {
+function checkAnswer(guess) {
     // sanitize the input
     guess = sanitize(guess);
+
+    // TODO: O(N) iteration through array is inefficient
     for (var i = 0; i < puzzleHashes.length; i++) {
-        if (puzzleHashes[i].name === puzzleName) {
+        if (puzzleHashes[i].name === currPuzzle) {
             if (guess.hashCode() === puzzleHashes[i].answer_hash) {
                 return CORRECT;
             }
@@ -94,43 +107,64 @@ function checkAnswer(puzzleName, guess) {
 }
 
 function tests() {
-    var rightAnswer = "teslaHQ";
+    /*var rightAnswer = "teslaHQ";
     var sortaAnswer = "tesla";
     for(var i = 0; i < 9; i++) {
         console.log(puzzleNames[i], checkAnswer(puzzleNames[i], rightAnswer));
     }
     for(var i = 0; i < 9; i++) {
         console.log(puzzleNames[i], checkAnswer(puzzleNames[i], sortaAnswer));
-    }
+    }*/
 }
 // tests();
 
 /********************* View logic *******************/
 
 document.getElementById("form").onsubmit = function() {
-    var puzzleName = document.getElementById("puzzleName").value;
-    var guess = document.getElementById("guess").value;
-
     var outputText;
-    var check = checkAnswer(puzzleName, guess);
-    if (check == CORRECT) {
-        outputText = "<strong>" + sanitize(guess) + "</strong> is correct!";
-    } else if (check == CLOSE) {
-        outputText = "<strong>" + sanitize(guess) + "</strong> is on the right track. Keep going!";
+    if (currPuzzle === "") {
+        outputText = "You need to select a puzzle first!";
     } else {
-        outputText = "Incorrect. Try again!";
+        var guess = document.getElementById("guess").value;
+
+        var check = checkAnswer(guess);
+        if (check == CORRECT) {
+            outputText = "<strong>" + sanitize(guess) + "</strong> is correct!";
+        } else if (check == CLOSE) {
+            outputText = "<strong>" + sanitize(guess) + "</strong> is on the right track. Keep going!";
+        } else {
+            outputText = "Incorrect. Try again!";
+        }
     }
 
     document.getElementById("output").innerHTML = outputText;
 };
 
+
+
+function initHandlers() {
+    var puzzleButtons = document.getElementsByClassName("puzzle_button");
+    for (var i = 0; i < puzzleButtons.length; i++) {
+        puzzleButtons[i].onclick = function() {
+            currPuzzle = this.innerHTML;
+            console.log(currPuzzle);
+        };
+    }
+}
+
 /********************** Initialization **************/
 (function init() {
     // Populate the select
-    var puzzleNameSelect = document.getElementById("puzzleName");
+    var puzzleNameSelect = document.getElementById("puzzleBoxes");
     for (var i = 0; i < puzzleNames.length; i++) {
-        var option = document.createElement("option");
-        option.text = puzzleNames[i];
-        puzzleNameSelect.add(option);
+        var puzzleBox = document.createElement("div");
+        puzzleBox.className = "column third";
+        puzzleBox.innerHTML = "<p" + " class=\"center\"><a"
+            + " href=\"#\"class=\"puzzle_button\">" + puzzleNames[i] +
+            "</a></p>";
+        puzzleNameSelect.appendChild(puzzleBox);
     }
+
+    // Set up handlers
+    initHandlers();
 })();

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../assets/normalize.css" rel="stylesheet">
-    <link href="../assets/style.css" rel="stylesheet">
+    <link href="assets/normalize.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
     <title>Stanford Solar Car Puzzles</title>
   </head>
   <body>
@@ -15,18 +15,11 @@
         <p>Where the heck is everyone? This is only a checker, so no funny business, please.</p>
       </div>
       <form id="form" action="javascript:void(0);">
+        <div id="puzzleBoxes" class="row">
+          <!-- JS will auto-generate boxes here -->
+        </div>
         <div class="row">
-          <!-- Maybe it's time to look into flex boxes -->
-          <table>
-            <tr>
-              <td class="label">Puzzle:</td>
-              <td><select id="puzzleName" /></td>
-            </tr>
-            <tr>
-              <td class="label">Answer:</td>
-              <td><input type="text" id="guess" /></td>
-            </tr>
-          </table>
+          <p>Answer: <input type="text" id="guess" /></p>
         </div>
         <div class="row">
           <p>
