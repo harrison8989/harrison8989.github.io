@@ -5,29 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../assets/normalize.css" rel="stylesheet">
     <link href="../assets/style.css" rel="stylesheet">
-    <style>
-      input[type="text"] {
-          width: 100%;
-      }
-    </style>
     <title>Stanford Solar Car Puzzles</title>
   </head>
   <body>
     <div class="container">
       <div class="row">
-        <h1 class="center">Stanford Solar Car Puzzles</h1>
+        <h1>Stanford Solar Car Puzzles</h1>
         <hr />
         <p>Where the heck is everyone? This is only a checker, so no funny business, please.</p>
       </div>
       <form id="form" action="javascript:void(0);">
         <div class="row">
-          <div class="column">
-            <p>Stuff</p>
-            <p>Puzzle: <select id="puzzleName" /></p>
-          </div>
-          <div class="column rest">
-            <p>Answer: <input type="text" id="guess"></p>
-          </div>
+          <!-- Maybe it's time to look into flex boxes -->
+          <table>
+            <tr>
+              <td class="label">Puzzle:</td>
+              <td><select id="puzzleName" /></td>
+            </tr>
+            <tr>
+              <td class="label">Answer:</td>
+              <td><input type="text" id="guess" /></td>
+            </tr>
+          </table>
         </div>
         <div class="row">
           <p>
