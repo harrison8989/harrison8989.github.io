@@ -9,9 +9,9 @@
   </head>
   <body>
     <div class="container">
+      <h1>Stanford Solar Car Puzzles</h1>
+      <hr />
       <div class="row">
-        <h1>Stanford Solar Car Puzzles</h1>
-        <hr />
         <p>Where the heck is everyone? This is only a checker, so no funny business, please.</p>
       </div>
       <form id="form" action="javascript:void(0);">
@@ -19,16 +19,20 @@
           <!-- JS will auto-generate boxes here -->
         </div>
         <div class="row">
-          <p>Answer: <input type="text" id="guess" /></p>
-        </div>
-        <div class="row">
-          <p>
-            <input id="submit" type="submit" value="Check answer!"
-                   style="min-width: 49%; height: 100px;">
-          </p>
-          <p>
-            <span id="output"></span>
-          </p>
+          <div class="column third">
+            <p>Answer: <input type="text" id="guess" /></p>
+          </div>
+          <div class="column third">
+            <p class="center">
+              <input id="submit" type="submit" value="Check answer!"
+                     style="width: 100%; height: 50px;">
+            </p>
+          </div>
+          <div class="column third">
+            <p>
+              <span id="output"></span>
+            </p>
+          </div>
         </div>
       </form>
     </div>

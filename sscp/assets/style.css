@@ -34,10 +34,20 @@
     .column.third {
         width: 33%;
     }
+
+    div.puzzleBox {
+        margin: 0.1em;
+        padding: 0.1em;
+    }
 }
 .column.rest {
     overflow: hidden;
     float: none;
+}
+
+/* For mobile views */
+.column {
+    width: 100%;
 }
 
 .row:before, .row:after {
@@ -83,16 +93,40 @@ a:hover, a:active, a:focus {
     text-decoration: underline;
 }
 
-a.puzzle_button {
-    padding: 1rem;
-    margin: 0.1rem;
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.1em;
+}
+
+p {
+    line-height: 1.1em;
+}
+
+div.puzzleBox {
     border: 2px solid #4D4F53;
+    background-color: #EEEEE;
+    margin: 0.2em;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+div.puzzleBox.puzzleBoxSelected {
+    background-color: #CCAAAA;
+}
+
+div.puzzleBox p {
+    margin: 0.5em;
+}
+
+a.puzzle_button {
+    /* Meh */
 }
 
 a:link.puzzle_button,
 a:visited.puzzle_button {
     text-decoration: none;
-    background-color: #FFFFFF;
 }
 
 a:hover.puzzle_button,
@@ -109,4 +143,10 @@ a:focus.puzzle_button {
 
 td {
     padding-right: 10px;
+}
+
+/* Animations are sick */
+* {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
 }

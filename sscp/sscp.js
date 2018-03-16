@@ -143,11 +143,18 @@ document.getElementById("form").onsubmit = function() {
 
 
 function initHandlers() {
-    var puzzleButtons = document.getElementsByClassName("puzzle_button");
-    for (var i = 0; i < puzzleButtons.length; i++) {
-        puzzleButtons[i].onclick = function() {
-            currPuzzle = this.innerHTML;
+    var puzzleBoxes = document.getElementsByClassName("puzzleBox");
+    for (var i = 0; i < puzzleBoxes.length; i++) {
+
+        puzzleBoxes[i].onclick = function() {
+            var puzzleBoxesSelected = document.getElementsByClassName("puzzleBox puzzleBoxSelected");
+            for (var j = 0; j < puzzleBoxesSelected.length; j++) {
+                puzzleBoxesSelected[j].className = "puzzleBox";
+            }
+
+            currPuzzle = this.children[0].innerHTML;
             console.log(currPuzzle);
+            this.className = "puzzleBox puzzleBoxSelected";
         };
     }
 }
@@ -159,9 +166,9 @@ function initHandlers() {
     for (var i = 0; i < puzzleNames.length; i++) {
         var puzzleBox = document.createElement("div");
         puzzleBox.className = "column third";
-        puzzleBox.innerHTML = "<p" + " class=\"center\"><a"
-            + " href=\"#\"class=\"puzzle_button\">" + puzzleNames[i] +
-            "</a></p>";
+        puzzleBox.innerHTML = "<div class=\"puzzleBox\"><p" + ""
+            + " class=\"center\">" + puzzleNames[i] +
+            "</p></div>";
         puzzleNameSelect.appendChild(puzzleBox);
     }
 
