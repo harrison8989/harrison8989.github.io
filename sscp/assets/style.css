@@ -106,10 +106,10 @@ p {
 
 div.puzzleBox {
     border: 2px solid #4D4F53;
-    background-color: #EEEEE;
     margin: 0.2em;
     padding: 0.5em;
     cursor: pointer;
+    background-color: #DDDDDD;
 }
 
 div.puzzleBox.puzzleBoxSelected {
